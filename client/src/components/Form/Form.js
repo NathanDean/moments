@@ -105,7 +105,7 @@ const Form = ({currentId, setCurrentId}) => {
         noValidate 
       >
 
-        <Typography variant = "h6">{currentId ? "Edit" : "Create"} a moment</Typography>
+        <Typography className = {classes.formHeader} variant = "h6">{currentId ? "Edit" : "Create"} a moment</Typography>
 
         <TextField 
           name = "title" 
