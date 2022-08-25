@@ -2,7 +2,7 @@
 
 Deployed to Heroku <a href = "https://sheltered-reef-45999.herokuapp.com/">here</a>.
 
-Moments is a CRUD photo sharing app using RESTful routing that allows users to create an account and sign in, then create, edit, delete, like and comment on posts.
+Moments is a CRUD photo sharing app using that allows users to create an account and sign in, then create, edit, delete, like and comment on posts.
 
 The app is built with React, Node.js, Express and MongoDB/Mongoose, and uses Redux for state management, React Router for Navigation, Axios for API requests and Material UI for styling.  It can handle authentication and authorisation via email or Google Identity Services, making use of packages such as jsonwebtoken and bcrypt.
 
