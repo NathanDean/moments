@@ -1,4 +1,4 @@
-# Moments - Full stack photo sharing app
+# Moments - Full stack social media/photo sharing app
 
 Deployed to Heroku <a href = "https://sheltered-reef-45999.herokuapp.com/">here</a>.
 
