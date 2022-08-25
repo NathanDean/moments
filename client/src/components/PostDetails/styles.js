@@ -35,9 +35,8 @@ export default makeStyles(theme => ({
   },
   recommendedPosts: {
     display: "flex",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-    },
+    flexDirection: "row",
+    flexWrap: "wrap"
   },
   loadingPaper: {
     display: "flex", 

@@ -1,5 +1,5 @@
 // React + Redux
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 // Material UI
@@ -16,7 +16,6 @@ const CommentSection = ({post}) => {
     // Hooks
     const classes = useStyles();
     const dispatch = useDispatch();
-    const commentsRef = useRef();
 
     // State
     const [comments, setComments] = useState(post?.comments);
@@ -34,8 +33,6 @@ const CommentSection = ({post}) => {
         // Rerenders component so new comment is displayed immediately rather than on page refresh
         setComments(newComments);
         setComment("");
-
-        commentsRef.current.scrollIntoView({behaviour: "smooth"});
     }
 
     return (
@@ -55,18 +52,17 @@ const CommentSection = ({post}) => {
                         {comment}
                     </Typography>
                 ))}
-
-                <div ref = {commentsRef} />
                     
             </div>
 
-            <Divider style={{ margin: '20px 0' }} />
                 
             <div className={classes.leaveCommentContainer}>
 
                 {user?.result?.name && (
 
                     <div>
+
+                    <Divider style={{ margin: '20px 0' }} />
 
                     <Typography gutterBottom variant = "h6">Leave a comment</Typography>
 

@@ -30,6 +30,9 @@ const theme = createMuiTheme({
         subtitle1: {
             letterSpacing: ".15rem"
         },
+        subtitle2: {
+            letterSpacing: ".15rem"
+        },
         button: {
             letterSpacing: ".15rem"
         }

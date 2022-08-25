@@ -8,7 +8,7 @@ import { Avatar, Button, Paper, Grid, Typography, Container } from "@material-ui
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 // Other third party
-import { GoogleLogin, googleLogout } from "@react-oauth/google";
+import { GoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 
 // Components

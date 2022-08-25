@@ -7,7 +7,7 @@ export const getPosts = async (req, res) => {
     const { page } = req.query;
 
     try {
-        const LIMIT = 16;
+        const LIMIT = 8;
         // Page becomes string when passed into query so needs to be converted back to number
         const startIndex = (Number(page) - 1) * LIMIT;
         const noOfPosts = await PostMessage.countDocuments({});

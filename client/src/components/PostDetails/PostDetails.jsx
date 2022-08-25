@@ -26,7 +26,7 @@ const Post = () => {
   const history = useHistory();
 
   // Variables
-  const { post, posts, isLoading} = useSelector(state => state.posts)
+  const {post, posts, isLoading} = useSelector(state => state.posts)
   const {id} = useParams();
 
   // Effects
@@ -101,14 +101,13 @@ const Post = () => {
 
           <Divider />
 
-          <div className = {classes.RecommendedPosts}>
-            {recommendedPosts.map(({title, message, name, likes, selectedFile, _id}) => (
+          <div className = {classes.recommendedPosts}>
+            {recommendedPosts.map(({title, name, message, selectedFile, _id}) => (
               <div key = {_id} style = {{margin: "20px", cursor: "pointer"}} onClick = {() => openPost(_id)}>
                   <Typography gutterBottom variant = "h6">{title}</Typography>
                   <Typography gutterBottom variant = "subtitle2">{name}</Typography>
                   <Typography gutterBottom variant = "subtitle2">{message}</Typography>
-                  <Typography gutterBottom variant = "subtitle1">Likes: {likes?.length}</Typography>
-                  <img src = {selectedFile} width = "200px" />
+                  <img src = {selectedFile} width = "200px" alt = "" />
               </div>
             ))}
           </div>

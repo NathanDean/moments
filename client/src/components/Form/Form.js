@@ -86,7 +86,7 @@ const Form = ({currentId, setCurrentId}) => {
 
         <Typography variant = "h6" align = "center">
           
-          Please sign in to create your own memories.
+          Please sign in to create a moment.
           
         </Typography>
 

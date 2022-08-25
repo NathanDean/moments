@@ -83,8 +83,6 @@ export const createPost = (post, history) => async dispatch => {
 
         dispatch({type: START_LOADING});
 
-        console.log("Check")
-
         const {data} = await api.createPost(post);
 
         history.push(`posts/${data._id}`);

@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link, useHistory, useLocation } from "react-router-dom";
 
 // Material UI
-import { AppBar, Typography, Toolbar, Avatar, Button } from "@material-ui/core"
+import { AppBar, Toolbar, Avatar, Button } from "@material-ui/core"
 
 // Other third party
 import decode from "jwt-decode";

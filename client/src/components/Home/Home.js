@@ -1,5 +1,5 @@
 // React + Redux
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 
@@ -13,7 +13,7 @@ import Form from "../Form/Form";
 import Pagination from "../Pagination/Pagination";
 
 // Actions
-import { getPosts, getPostsBySearch } from "../../actions/posts";
+import { getPostsBySearch } from "../../actions/posts";
 
 // Styling
 import useStyles from "./styles"

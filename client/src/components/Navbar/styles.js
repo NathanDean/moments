@@ -23,8 +23,7 @@ export default makeStyles((theme) => ({
   },
   image: {
     marginBottom: "10px",
-    marginTop: '5px',
-    marginLeft: '10px'
+    marginTop: '5px'
   },
   toolbar: {
     display: 'flex',
