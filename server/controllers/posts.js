@@ -8,7 +8,6 @@ export const getPosts = async (req, res) => {
 
     try {
         const LIMIT = 8;
-        // Page becomes string when passed into query so needs to be converted back to number
         const startIndex = (Number(page) - 1) * LIMIT;
         const noOfPosts = await PostMessage.countDocuments({});
         
@@ -43,15 +42,12 @@ export const getPost = async (req, res) => {
 
 export const getPostsBySearch = async (req, res) => {
 
-    // These will be called whatever names they are given in the query string in the api index.js file
     const {term, tags} = req.query;
 
     try {
 
-        // "i" parameter means RegExp will ignore case
         const title = new RegExp(term, "i");
 
-        // $or means search will return results that match title or tags.  $in means search will return results that match any tag in tags string
         const postMessages = await PostMessage.find({
             $or: [
                 {title}, 
@@ -135,7 +131,7 @@ export const likePost = async (req,res) => {
             // If user has not already liked the post, adds their id to list of users who have liked the post
             post.likes.push(req.userId);
         } else {
-            // If user has already liked the post, removes their id from list of user who have liked the post (i.e. provides unlike functionality)
+            // If user has already liked the post, removes their id from list of user who have liked the post
             post.likes = post.likes.filter(id => id !== String(req.userId));
         };
 

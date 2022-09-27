@@ -1,7 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
-// import cors from "cors";
 import dotenv from "dotenv";
 
 import postRoutes from "./routes/posts.js";
@@ -13,7 +12,6 @@ dotenv.config();
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
-// Needs to be above the app.use statements setting routes
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
@@ -26,10 +24,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.use(cors());
-// app.options('*', cors())
-
-// Sets every route in postRoutes to begin with "/posts"
 app.use("/posts", postRoutes);
 app.use("/user", userRoutes);
 

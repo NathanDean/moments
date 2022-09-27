@@ -79,7 +79,6 @@ const CommentSection = ({post}) => {
                     <Button
                         style = {{marginTop: "10px"}}
                         fullWidth
-                        // disabled = {!comment}
                         variant = "contained"
                         color = "primary"
                         onClick = {handleClick}

@@ -4,11 +4,6 @@ const API = axios.create({
     baseURL: "https://serene-thicket-75792.herokuapp.com/"
 });
 
-// const API = axios.create({
-//     baseURL: "http://localhost:5000"
-// });
-
-
 // Passes token to middleware
 API.interceptors.request.use(req => {
     if(localStorage.getItem("profile")) {
